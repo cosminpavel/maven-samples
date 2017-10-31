@@ -9,13 +9,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String bla;
+        Calculator calculator = new Calculator();
 
-        Operations operations = new Operations();
-        Calculator calculator = new Calculator(operations);
-        while(true) {
-            bla = scanner.next();
-            System.out.println("=" + calculator.operationParser(bla));
-        }
+        System.out.println(calculator.operationParser("1 + 2"));
 
     }
 }

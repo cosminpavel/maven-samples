@@ -12,24 +12,23 @@ public class CalculatorTest {
     Calculator calculator;
     @Before
     public void setUp() throws Exception {
-       Operations operations = new Operations();
-       calculator = new Calculator(operations);
+       calculator = new Calculator();
     }
     @Test
     public void operationParser() throws Exception {
-        String expression = "1+2";
+        String expression = "1 + 2";
         assert(calculator.operationParser(expression) == 3.0);
-        expression = "1-2";
-        assert(calculator.operationParser(expression) == -1.0);
-        expression = "1*2";
+        expression = "-1 - 2";
+        assert(calculator.operationParser(expression) == -3.0);
+        expression = "1 * 2";
         assert(calculator.operationParser(expression) == 2.0);
-        expression = "5/2";
+        expression = "5 / 2";
         assert(calculator.operationParser(expression) == 2.5);
-        expression = "min(5,7)";
+        expression = "5 min 7";
         assert(calculator.operationParser(expression) == 5.0);
-        expression = "max(5,7)";
+        expression = "5 max 7";
         assert(calculator.operationParser(expression) == 7.0);
-        expression = "sqrt9";
+        expression = "sqrt 9";
         assert(calculator.operationParser(expression) == 3.0);
     }
 
