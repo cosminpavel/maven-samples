@@ -7,7 +7,7 @@ import java.util.Set;
  * Created by Cosmin on 10/17/2017.
  */
 public class HashSetBasedRepository<T> implements InMemoryRepository<T> {
-    Set<T> set;
+    private Set<T> set;
 
     public HashSetBasedRepository() {
         this.set = new HashSet<>();

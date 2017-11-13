@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class TestRemove {
     @State(Scope.Benchmark)
     public static class BeforeState {
-        Order order;
+        private Order order;
 
         @Setup(Level.Invocation)
         public void removeOrder(RepoState repoState) {

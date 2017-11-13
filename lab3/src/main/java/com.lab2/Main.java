@@ -1,8 +1,5 @@
 package com.lab2;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-import javafx.scene.control.PasswordField;
-
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;

@@ -9,13 +9,13 @@ import static org.junit.Assert.*;
  * Created by Cosmin on 10/30/2017.
  */
 public class DivideTest {
-    Divide divide;
+    private Divide divide;
     @Before
-    public void setUp() throws Exception {
+    public void setUp(){
         divide = new Divide();
     }
     @Test
-    public void calculate() throws Exception {
+    public void calculate(){
         assert(divide.calculate(1,2) == 0.5);
         assert(divide.calculate(5,5) == 1.0);
     }

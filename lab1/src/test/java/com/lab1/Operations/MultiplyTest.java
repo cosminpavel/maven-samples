@@ -9,13 +9,13 @@ import static org.junit.Assert.*;
  * Created by Cosmin on 10/30/2017.
  */
 public class MultiplyTest {
-    Multiply multiply;
+    private Multiply multiply;
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         multiply = new Multiply();
     }
     @Test
-    public void calculate() throws Exception {
+    public void calculate(){
         assert(multiply.calculate(2,3) == 6.0);
         assert(multiply.calculate(5,-2) == -10.0);
     }

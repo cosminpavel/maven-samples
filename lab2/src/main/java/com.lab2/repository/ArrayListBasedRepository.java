@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by Cosmin on 10/17/2017.
  */
 public class ArrayListBasedRepository<T> implements InMemoryRepository<T> {
-    ArrayList<T> list;
+    private ArrayList<T> list;
 
     public ArrayListBasedRepository() {
         this.list = new ArrayList<>();

@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * Created by Cosmin on 10/30/2017.
  */
 public class ConcurrentHashMapBaseRepository<T> implements InMemoryRepository<T>{
-    Map<T,Boolean> map;
+    private Map<T,Boolean> map;
 
     public ConcurrentHashMapBaseRepository() {
         this.map = new ConcurrentHashMap<>();

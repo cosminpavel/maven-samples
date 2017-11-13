@@ -23,7 +23,7 @@ public class TestAdd {
 
     @State(Scope.Benchmark)
     public static class BeforeState {
-        Order order;
+        private Order order;
 
         @Setup(Level.Invocation)
         public void generateOrder(SizeState sizeState) {

@@ -7,7 +7,7 @@ import java.util.TreeSet;
  * Created by Cosmin on 10/17/2017.
  */
 public class TreeSetBasedRepository<T> implements InMemoryRepository<T> {
-    Set<T> set;
+    private Set<T> set;
 
     public TreeSetBasedRepository() {
         this.set = new TreeSet<>();
