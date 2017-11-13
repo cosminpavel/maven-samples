@@ -3,6 +3,7 @@ package com.lab2;
 import com.sun.org.apache.xpath.internal.SourceTree;
 import javafx.scene.control.PasswordField;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -40,5 +41,12 @@ public class Main {
              tenProcent) {
             System.out.println(i);
         }
+        List<BigDecimal> bigDecimalsList = BigDecimalGenerator.generate(10);
+        String file = "..\\maven-samples\\lab3\\src\\main\\resources\\bigDecimals.txt";
+
+        BigDecimalsSerialize bigDecimalsSerialize = new BigDecimalsSerialize();
+        bigDecimalsSerialize.serializeBigDecimals(file,bigDecimalsList);
+        System.out.println(bigDecimalsSerialize.deserializeBigDecimals(file));
+
     }
 }
