@@ -47,19 +47,39 @@ public class Main {
             System.err.println(e);
         }
     }
+    public static volatile boolean producing = true;
     public static void main(String[] args) throws InterruptedException {
         String path = "..\\maven-samples\\lab4\\src\\main\\resources\\input4.txt";
         //restoreObjectsToFile(path);
         List<Person> persons = Collections.synchronizedList(new ArrayList<>());
-        Producer producer = new Producer(persons);
-        Consumer consumer = new Consumer(persons);
+
+        PC producerConsumer = new PC(persons);
+        Thread producer = new Thread(() -> {
+            try {
+                producerConsumer.produce();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+        Thread consumer = new Thread(() -> {
+            try {
+                producerConsumer.consume();
+            } catch (InterruptedException e){
+                e.printStackTrace();
+            }
+        });
 
         producer.start();
         consumer.start();
 
-        producer.join();
-        consumer.join();
-
-
+        try {
+            producer.join();
+            consumer.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
+
+
+
 }
