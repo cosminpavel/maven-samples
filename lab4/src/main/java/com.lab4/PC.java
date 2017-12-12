@@ -40,8 +40,12 @@ public class PC {
             {
                 // producer thread waits while list
                 // is 1
-                while (persons.size() == 1)
+                while (persons.size() == 1) {
+                    System.out.println("producer waiting!");
                     wait();
+
+                }
+
 
                 if (Validator.validName(posPers[0]) &&
                         Validator.validName(posPers[1]) &&
@@ -50,11 +54,11 @@ public class PC {
                         Validator.validEmail(posPers[4])) {
 
                      persons.add(new Person(posPers[0], posPers[1], posPers[2], posPers[3], posPers[4]));
+                    notify();
                 }
 
-                // notifies the consumer thread that
-                // now it can start consuming
-                notify();
+                // notifies the consumer thread
+
             }
         }
         producing = false;
@@ -67,9 +71,11 @@ public class PC {
             while (producing) {
                 synchronized (this) {
                     // consumer thread waits while list
-                    while (persons.size() == 0)
+                    while (persons.size() == 0) {
+                        System.out.println("consumer waiting!");
                         wait();
 
+                    }
                     //to retrive the ifrst job in the list
                     bw.write(persons.remove(0).toString() + "\n");
                     // Wake up producer thread

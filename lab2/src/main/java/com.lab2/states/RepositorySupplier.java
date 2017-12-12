@@ -2,6 +2,7 @@ package com.lab2.states;
 
 import com.lab2.Order;
 import com.lab2.repository.*;
+import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.util.function.Supplier;
 
@@ -35,6 +36,18 @@ public enum RepositorySupplier implements Supplier<InMemoryRepository<Order>> {
         @Override
         public InMemoryRepository<Order> get() {
             return new ConcurrentHashMapBaseRepository<>();
+        }
+    },
+    ECLIPSE_MUTABLE_LIST(){
+        @Override
+        public InMemoryRepository<Order> get() {
+            return new EclipseMutableListBasedRepository<>();
+        }
+    },
+    TROVE4J_HASHSET() {
+        @Override
+        public InMemoryRepository<Order> get() {
+            return new Trove4jHashSetBasedRepository<>();
         }
     }
 
