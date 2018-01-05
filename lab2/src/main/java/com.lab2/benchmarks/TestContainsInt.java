@@ -3,6 +3,7 @@ package com.lab2.benchmarks;
 import com.lab2.states.IntSizeState;
 import com.lab2.states.PrimitiveRepoState;
 import org.openjdk.jmh.annotations.*;
+import org.openjdk.jmh.infra.Blackhole;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
@@ -15,8 +16,8 @@ import java.util.concurrent.TimeUnit;
  */
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
-@Warmup(iterations = 4, time = 1)
-@Measurement(iterations = 10, time = 1)
+@Warmup(iterations = 2, time = 1)
+@Measurement(iterations = 5, time = 1)
 @Fork(2)
 public class TestContainsInt {
 
@@ -51,18 +52,21 @@ public class TestContainsInt {
     }
 
     @Benchmark
-    public void containsBefore(PrimitiveRepoState repoState, BeforeState before) {
+    public void containsBefore(PrimitiveRepoState repoState, BeforeState before, Blackhole blackhole) {
         repoState.list.contains(before.number);
+        blackhole.consume(repoState);
     }
 
     @Benchmark
-    public void containsExisting(PrimitiveRepoState repoState, ExistingState existing) {
+    public void containsExisting(PrimitiveRepoState repoState, ExistingState existing, Blackhole blackhole) {
         repoState.list.contains(existing.number);
+        blackhole.consume(repoState);
     }
 
     @Benchmark
-    public void containsAfter(PrimitiveRepoState repoState, AfterState after) {
+    public void containsAfter(PrimitiveRepoState repoState, AfterState after, Blackhole blackhole) {
         repoState.list.contains(after.number);
+        blackhole.consume(repoState);
     }
 
     public static void main(String[] args) throws RunnerException {

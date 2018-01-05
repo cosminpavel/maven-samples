@@ -20,3 +20,28 @@ TestRemoveInt.removeBefore          KOLOBOKE_HASH_SET                   N/A     
 TestRemoveInt.removeBefore          FASTUTIL_HASH_SET                   N/A     100  thrpt   20  35831.946 ± 368.097  ops/ms
 TestRemoveInt.removeExisting        KOLOBOKE_HASH_SET                   N/A     100  thrpt   20  38153.842 ± 188.434  ops/ms
 TestRemoveInt.removeExisting        FASTUTIL_HASH_SET                   N/A     100  thrpt   20  39736.990 ± 185.978  ops/ms
+
+
+
+TestAddInt.addAfter           KOLOBOKE_HASH_SET                   N/A     100  thrpt   10  35659.529 ±  696.421  ops/ms
+TestAddInt.addAfter           FASTUTIL_HASH_SET                   N/A     100  thrpt   10  36637.725 ±   43.474  ops/ms
+TestAddInt.addBefore          KOLOBOKE_HASH_SET                   N/A     100  thrpt   10  31025.141 ±  835.969  ops/ms
+TestAddInt.addBefore          FASTUTIL_HASH_SET                   N/A     100  thrpt   10  30746.333 ± 7016.664  ops/ms
+TestAddInt.addExisting        KOLOBOKE_HASH_SET                   N/A     100  thrpt   10  34920.670 ± 2076.362  ops/ms
+TestAddInt.addExisting        FASTUTIL_HASH_SET                   N/A     100  thrpt   10  36134.486 ±  279.585  ops/ms
+
+
+TestContainsInt.containsAfter           KOLOBOKE_HASH_SET                   N/A     100  thrpt   10  31762.277 ±  131.292  ops/ms
+TestContainsInt.containsAfter           FASTUTIL_HASH_SET                   N/A     100  thrpt   10  32787.550 ±  144.156  ops/ms
+TestContainsInt.containsBefore          KOLOBOKE_HASH_SET                   N/A     100  thrpt   10  31394.863 ±  749.850  ops/ms
+TestContainsInt.containsBefore          FASTUTIL_HASH_SET                   N/A     100  thrpt   10  32373.179 ±   78.069  ops/ms
+TestContainsInt.containsExisting        KOLOBOKE_HASH_SET                   N/A     100  thrpt   10  33832.675 ±  263.978  ops/ms
+TestContainsInt.containsExisting        FASTUTIL_HASH_SET                   N/A     100  thrpt   10  35007.200 ±  641.083  ops/ms
+
+
+TestRemoveInt.removeAfter           KOLOBOKE_HASH_SET                   N/A     100  thrpt   10  36961.248 ±  236.205  ops/ms
+TestRemoveInt.removeAfter           FASTUTIL_HASH_SET                   N/A     100  thrpt   10  40449.268 ±   91.529  ops/ms
+TestRemoveInt.removeBefore          KOLOBOKE_HASH_SET                   N/A     100  thrpt   10  29764.014 ±  128.209  ops/ms
+TestRemoveInt.removeBefore          FASTUTIL_HASH_SET                   N/A     100  thrpt   10  32395.217 ±   64.919  ops/ms
+TestRemoveInt.removeExisting        KOLOBOKE_HASH_SET                   N/A     100  thrpt   10  36087.225 ±  327.450  ops/ms
+TestRemoveInt.removeExisting        FASTUTIL_HASH_SET                   N/A     100  thrpt   10  36978.550 ±  264.086  ops/ms

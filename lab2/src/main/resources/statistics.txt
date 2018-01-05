@@ -56,3 +56,62 @@ TestRemove.removeExisting                         N/A            ARRAY_LIST    1
 TestRemove.removeExisting                         N/A   CONCURRENT_HASH_MAP    1000  thrpt   20  33364.187 ±  37.163  ops/ms
 TestRemove.removeExisting                         N/A  ECLIPSE_MUTABLE_LIST    1000  thrpt   20  34399.973 ±  77.771  ops/ms
 TestRemove.removeExisting                         N/A       TROVE4J_HASHSET    1000  thrpt   20  28555.794 ±  28.996  ops/ms
+
+TestAdd.add_after                           N/A              HASH_SET    1000  thrpt   10  20674.449 ± 5556.052  ops/ms
+TestAdd.add_after                           N/A              TREE_SET    1000  thrpt   10  25882.425 ± 6763.148  ops/ms
+TestAdd.add_after                           N/A            ARRAY_LIST    1000  thrpt   10  26522.366 ± 5416.811  ops/ms
+TestAdd.add_after                           N/A   CONCURRENT_HASH_MAP    1000  thrpt   10  13953.130 ± 4921.687  ops/ms
+TestAdd.add_after                           N/A  ECLIPSE_MUTABLE_LIST    1000  thrpt   10  24661.681 ± 9225.316  ops/ms
+TestAdd.add_after                           N/A       TROVE4J_HASHSET    1000  thrpt   10  20593.728 ± 6562.037  ops/ms
+TestAdd.add_before                          N/A              HASH_SET    1000  thrpt   10  26687.792 ± 1071.238  ops/ms
+TestAdd.add_before                          N/A              TREE_SET    1000  thrpt   10  20709.883 ±  467.079  ops/ms
+TestAdd.add_before                          N/A            ARRAY_LIST    1000  thrpt   10  35669.675 ±  340.461  ops/ms
+TestAdd.add_before                          N/A   CONCURRENT_HASH_MAP    1000  thrpt   10  18679.072 ±  181.318  ops/ms
+TestAdd.add_before                          N/A  ECLIPSE_MUTABLE_LIST    1000  thrpt   10  36615.925 ±  168.595  ops/ms
+TestAdd.add_before                          N/A       TROVE4J_HASHSET    1000  thrpt   10  20291.091 ± 1011.468  ops/ms
+TestAdd.add_existing                        N/A              HASH_SET    1000  thrpt   10  28436.519 ± 1867.197  ops/ms
+TestAdd.add_existing                        N/A              TREE_SET    1000  thrpt   10  31071.547 ±  213.453  ops/ms
+TestAdd.add_existing                        N/A            ARRAY_LIST    1000  thrpt   10  35374.893 ±  712.909  ops/ms
+TestAdd.add_existing                        N/A   CONCURRENT_HASH_MAP    1000  thrpt   10  20807.742 ±   96.053  ops/ms
+TestAdd.add_existing                        N/A  ECLIPSE_MUTABLE_LIST    1000  thrpt   10  36182.863 ±  787.281  ops/ms
+TestAdd.add_existing                        N/A       TROVE4J_HASHSET    1000  thrpt   10  11005.455 ±  138.799  ops/ms
+
+
+TestContains.containsAfter                            N/A              HASH_SET    1000  thrpt   10  32061.557 ±  556.907  ops/ms
+TestContains.containsAfter                            N/A              TREE_SET    1000  thrpt   10  20533.680 ±  190.028  ops/ms
+TestContains.containsAfter                            N/A            ARRAY_LIST    1000  thrpt   10   1393.596 ±  107.330  ops/ms
+TestContains.containsAfter                            N/A   CONCURRENT_HASH_MAP    1000  thrpt   10  32378.898 ±  692.414  ops/ms
+TestContains.containsAfter                            N/A  ECLIPSE_MUTABLE_LIST    1000  thrpt   10   1328.682 ±    4.484  ops/ms
+TestContains.containsAfter                            N/A       TROVE4J_HASHSET    1000  thrpt   10  28997.784 ±  933.378  ops/ms
+TestContains.containsBefore                           N/A              HASH_SET    1000  thrpt   10  32357.492 ±  182.404  ops/ms
+TestContains.containsBefore                           N/A              TREE_SET    1000  thrpt   10  28154.736 ±  917.752  ops/ms
+TestContains.containsBefore                           N/A            ARRAY_LIST    1000  thrpt   10   1442.573 ±   28.000  ops/ms
+TestContains.containsBefore                           N/A   CONCURRENT_HASH_MAP    1000  thrpt   10  32801.727 ±  151.271  ops/ms
+TestContains.containsBefore                           N/A  ECLIPSE_MUTABLE_LIST    1000  thrpt   10   1322.214 ±    8.459  ops/ms
+TestContains.containsBefore                           N/A       TROVE4J_HASHSET    1000  thrpt   10  29620.532 ±  828.886  ops/ms
+TestContains.containsExisting                         N/A              HASH_SET    1000  thrpt   10  25808.089 ±  158.105  ops/ms
+TestContains.containsExisting                         N/A              TREE_SET    1000  thrpt   10  11831.637 ±  514.624  ops/ms
+TestContains.containsExisting                         N/A            ARRAY_LIST    1000  thrpt   10   2367.159 ±  349.939  ops/ms
+TestContains.containsExisting                         N/A   CONCURRENT_HASH_MAP    1000  thrpt   10  25753.802 ± 1078.315  ops/ms
+TestContains.containsExisting                         N/A  ECLIPSE_MUTABLE_LIST    1000  thrpt   10   2516.129 ±   62.715  ops/ms
+TestContains.containsExisting                         N/A       TROVE4J_HASHSET    1000  thrpt   10  31062.756 ±  764.724  ops/ms
+
+
+TestRemove.removeAfter                            N/A              HASH_SET    1000  thrpt   10  32881.577 ± 1259.044  ops/ms
+TestRemove.removeAfter                            N/A              TREE_SET    1000  thrpt   10  36645.473 ±  366.233  ops/ms
+TestRemove.removeAfter                            N/A            ARRAY_LIST    1000  thrpt   10  36722.382 ± 1604.866  ops/ms
+TestRemove.removeAfter                            N/A   CONCURRENT_HASH_MAP    1000  thrpt   10  31781.279 ± 1971.463  ops/ms
+TestRemove.removeAfter                            N/A  ECLIPSE_MUTABLE_LIST    1000  thrpt   10  36765.909 ± 1323.262  ops/ms
+TestRemove.removeAfter                            N/A       TROVE4J_HASHSET    1000  thrpt   10  34258.206 ±  187.507  ops/ms
+TestRemove.removeBefore                           N/A              HASH_SET    1000  thrpt   10  32292.267 ±  797.010  ops/ms
+TestRemove.removeBefore                           N/A              TREE_SET    1000  thrpt   10  27206.083 ± 2706.985  ops/ms
+TestRemove.removeBefore                           N/A            ARRAY_LIST    1000  thrpt   10   1314.618 ±   37.428  ops/ms
+TestRemove.removeBefore                           N/A   CONCURRENT_HASH_MAP    1000  thrpt   10  29199.460 ±  183.885  ops/ms
+TestRemove.removeBefore                           N/A  ECLIPSE_MUTABLE_LIST    1000  thrpt   10   1186.288 ±  155.286  ops/ms
+TestRemove.removeBefore                           N/A       TROVE4J_HASHSET    1000  thrpt   10  29285.629 ± 2099.224  ops/ms
+TestRemove.removeExisting                         N/A              HASH_SET    1000  thrpt   10  33955.421 ± 1571.190  ops/ms
+TestRemove.removeExisting                         N/A              TREE_SET    1000  thrpt   10  34077.275 ± 3180.267  ops/ms
+TestRemove.removeExisting                         N/A            ARRAY_LIST    1000  thrpt   10  33921.654 ± 4939.531  ops/ms
+TestRemove.removeExisting                         N/A   CONCURRENT_HASH_MAP    1000  thrpt   10  32935.470 ± 1208.282  ops/ms
+TestRemove.removeExisting                         N/A  ECLIPSE_MUTABLE_LIST    1000  thrpt   10  34331.101 ±  513.615  ops/ms
+TestRemove.removeExisting                         N/A       TROVE4J_HASHSET    1000  thrpt   10  28177.858 ± 1283.735  ops/ms

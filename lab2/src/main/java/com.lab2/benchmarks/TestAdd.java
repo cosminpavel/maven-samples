@@ -4,6 +4,7 @@ import com.lab2.Order;
 import com.lab2.states.RepoState;
 import com.lab2.states.SizeState;
 import org.openjdk.jmh.annotations.*;
+import org.openjdk.jmh.infra.Blackhole;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
@@ -16,8 +17,8 @@ import java.util.concurrent.TimeUnit;
  */
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
-@Warmup(iterations = 5, time = 1)
-@Measurement(iterations = 10, time = 1)
+@Warmup(iterations = 2, time = 1)
+@Measurement(iterations = 5, time = 1)
 @Fork(2)
 public class TestAdd {
 
@@ -67,18 +68,21 @@ public class TestAdd {
     }
 
     @Benchmark
-    public void add_before(RepoState repoState, BeforeState before) {
+    public void add_before(RepoState repoState, BeforeState before, Blackhole blackhole) {
          repoState.orders.add(before.order);
+         blackhole.consume(repoState);
     }
 
     @Benchmark
-    public void add_existing(RepoState repoState, ExistingState existing) {
+    public void add_existing(RepoState repoState, ExistingState existing, Blackhole blackhole) {
         repoState.orders.add(existing.order);
+        blackhole.consume(repoState);
     }
 
     @Benchmark
-    public void add_after(RepoState repoState, AfterState after) {
+    public void add_after(RepoState repoState, AfterState after, Blackhole blackhole) {
         repoState.orders.add(after.order);
+        blackhole.consume(repoState);
     }
 
     public static void main(String[] args) throws RunnerException {
